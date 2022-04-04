@@ -13,7 +13,7 @@ const db = require('./config/connection');
 
 //express server
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 //apollo server
 const server = new ApolloServer({
