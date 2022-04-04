@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import { Accordion, Container, Col, Form, Button, Card, Stack } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 import { searchGoogleBooks } from '../utils/API';
@@ -88,7 +88,7 @@ const SearchBooks = () => {
 
   return (
     <>
-      <Jumbotron fluid className='text-light bg-dark'>
+      <Accordion fluid className='text-light bg-dark'>
         <Container>
           <h1>Search for Books!</h1>
           <Form onSubmit={handleFormSubmit}>
@@ -111,7 +111,7 @@ const SearchBooks = () => {
             </Form.Row>
           </Form>
         </Container>
-      </Jumbotron>
+      </Accordion>
 
       <Container>
         <h2>
@@ -119,7 +119,7 @@ const SearchBooks = () => {
             ? `Viewing ${searchedBooks.length} results:`
             : 'Search for a book to begin'}
         </h2>
-        <CardColumns>
+        <Stack direction='vertical'>
           {searchedBooks.map((book) => {
             return (
               <Card key={book.bookId} border='dark'>
@@ -144,7 +144,7 @@ const SearchBooks = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </Stack>
       </Container>
     </>
   );

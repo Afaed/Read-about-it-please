@@ -15,13 +15,6 @@ const resolvers = {
             }
             throw new AuthenticationError('Not Logged in')
         },
-        //get all users
-        users: async () => {
-            return User.find()
-                .select('-__v -password')
-                .populate('Book')
-                .populate('User')
-        },
     },
     Mutation: {
         addUser: async (parent, args) => {
