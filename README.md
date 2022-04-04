@@ -18,7 +18,8 @@
 
   ## Usage 
 
-  Just go to the above and thats pretty much how you use it.
+  To search for a book, type in a title and the app will look for any books that match or are similar to the title of a book you are looking for. To save it, click the save button and it will be saved. To delete a book from your saves you must be logged in and click the remove from save.
+
 
   ## License 
 
