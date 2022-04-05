@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from '@apollo/client'
-import SearchBooks from './src/pages/SearchBooks';
-import SavedBooks from './src/pages/SavedBooks';
-import Navbar from './src/components/Navbar';
+import SearchBooks from './pages/SearchBooks';
+import SavedBooks from './pages/SavedBooks';
+import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
   request: (operation) => {
